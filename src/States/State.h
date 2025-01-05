@@ -21,6 +21,7 @@ public:
 	virtual ~State() {}
 	virtual void render() = 0;
 	virtual void update(float&) = 0;
+	virtual void handleInput(float&) = 0;
 	bool shoudQuit() {
 		return this->quitStatus;
 	}

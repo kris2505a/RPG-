@@ -12,6 +12,7 @@ void Game::initVariables() {
 	this->resolution = sf::VideoMode({ 1024, 768 });
 	this->fps = 144;
 	this->name = "RPG";
+	this->stateManager = new StateManager(this->window);
 }
 
 void Game::initWindow() {
@@ -34,13 +35,18 @@ void Game::gameLoop() {
 
 void Game::render() {
 	this->window->clear(sf::Color::Black);
-
+	
+	if (!this->stateManager->isEmpty()) {
+		this->stateManager->getCurrentState()->render();
+	}
 
 	this->window->display();
 }
 
 void Game::update(float& deltaTime) {
-
+	if (!this->stateManager->isEmpty())
+		this->stateManager->getCurrentState()->handleInput(this->deltaTime);
+		this->stateManager->getCurrentState()->update(this->deltaTime);
 }
 
 void Game::updateDeltaTime() {

@@ -1,6 +1,7 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include <string>
+#include "StateManager.h"
 
 class Game {
 
@@ -11,6 +12,7 @@ private:
 	int fps;
 	std::string name;
 	sf::Clock dtClock;
+	StateManager* stateManager;
 
 public:
 	
