@@ -7,4 +7,8 @@ D:\SFML Projects\RPG-\Dependencies\SFML\include\SFML\System\Exception.hpp(41,47)
       see declaration of 'sf::Exception'
   
   RPG.vcxproj -> D:\SFML Projects\RPG-\bin\Debug-x64\RPG.exe
-  0 File(s) copied
+  D:\SFML Projects\RPG-\Dependencies\SFML\bin\Debug\sfml-audio-d-3.dll
+  D:\SFML Projects\RPG-\Dependencies\SFML\bin\Debug\sfml-graphics-d-3.dll
+  D:\SFML Projects\RPG-\Dependencies\SFML\bin\Debug\sfml-system-d-3.dll
+  D:\SFML Projects\RPG-\Dependencies\SFML\bin\Debug\sfml-window-d-3.dll
+  4 File(s) copied

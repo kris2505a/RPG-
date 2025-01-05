@@ -1,5 +1,4 @@
 #include "Game.h"
-#include <iostream>
 
 
 Game::Game() {
@@ -10,7 +9,7 @@ Game::Game() {
 
 
 void Game::initVariables() {
-	this->resolution = sf::VideoMode({ 960, 540 });
+	this->resolution = sf::VideoMode({ 1024, 768 });
 	this->fps = 144;
 	this->name = "RPG";
 }
@@ -46,7 +45,6 @@ void Game::update(float& deltaTime) {
 
 void Game::updateDeltaTime() {
 	this->deltaTime = this->dtClock.restart().asSeconds();
-	std::cout << this->deltaTime << std::endl;
 }
 
 

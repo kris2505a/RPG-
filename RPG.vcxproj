@@ -96,6 +96,7 @@
   <ItemGroup>
     <ClCompile Include="src\Game.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\StateManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
@@ -103,6 +104,7 @@
   <ItemGroup>
     <ClInclude Include="src\Game.h" />
     <ClInclude Include="src\States\State.h" />
+    <ClInclude Include="src\StateManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
