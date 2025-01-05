@@ -10,6 +10,7 @@ private:
 	float deltaTime;
 	int fps;
 	std::string name;
+	sf::Clock dtClock;
 
 public:
 	
@@ -19,6 +20,8 @@ public:
 	void initVariables();
 	void initWindow();
 	void render();
-	void update();
+	void update(float&);
+	void updateDeltaTime();
+	void gameLoop();
 };
 
