@@ -2,31 +2,31 @@
 #include <SFML/Graphics.hpp>
 #include <vector>
 
+enum Mode {
+	NONE = 0,
+	MAINMENU,
+	GAME,
+	PAUSEMENU,
+	GAMEOVER
+};
+
 class State {
 
-private:
+protected:
 
 	sf::RenderTarget* targetWindow{ nullptr };
 	std::vector <sf::Texture> textures;
-	bool quitStatus{ false };
-	bool runningStatus{ false };
-
-
+	bool quit{ false };
+	bool pause{ false };
+	bool running{ false };
+	Mode gameMode = Mode::NONE;
 
 public:
+	State(Mode mode, sf::Color color, sf::RenderWindow* window) {
+		this->targetWindow = window;
+		this->gameMode = mode;
+		
+	}
 
-	State() {
-		this->runningStatus = true;
-	}
-	virtual ~State() {}
-	virtual void render() = 0;
-	virtual void update(float&) = 0;
-	virtual void handleInput(float&) = 0;
-	bool shoudQuit() {
-		return this->quitStatus;
-	}
-	bool isRunning() {
-		return this->runningStatus;
-	}
 };
 

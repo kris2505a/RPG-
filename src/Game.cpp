@@ -4,6 +4,7 @@
 Game::Game() {
 	this->initVariables();
 	this->initWindow();
+	this->stateManager->addState(new State(Mode::GAME, sf::Color::Cyan, this->window));
 }
 
 
@@ -44,9 +45,9 @@ void Game::render() {
 }
 
 void Game::update(float& deltaTime) {
-	if (!this->stateManager->isEmpty())
-		this->stateManager->getCurrentState()->handleInput(this->deltaTime);
-		this->stateManager->getCurrentState()->update(this->deltaTime);
+	if (!this->stateManager->isEmpty()) {
+		this->stateManager->getCurrentState()->update(deltaTime);
+	}
 }
 
 void Game::updateDeltaTime() {

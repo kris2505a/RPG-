@@ -5,11 +5,12 @@ StateManager::StateManager(sf::RenderWindow* window) {
 	this->targetWindow = window;
 }
 
-void StateManager::addState(State* newState, bool removeCurrent = false) {
+void StateManager::addState(State* newState, bool removeCurrent) {
 
 	if (removeCurrent && !this->state.empty()) {
 		this->state.pop();
 	}
+	this->state.push(newState);
 }
 
 
