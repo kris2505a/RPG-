@@ -25,7 +25,6 @@ int main()
         stateManager.getCurrentState()->update(deltaTime);
         stateManager.getCurrentState()->render();
         stateManager.getCurrentState()->handleInput();
-        stateManager.handleInput();
          
 
         window.display();
