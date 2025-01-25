@@ -7,7 +7,7 @@ int main()
     sf::RenderWindow window(sf::VideoMode(1280, 720), "SFML works!");
     sf::CircleShape shape(100.f);
     shape.setFillColor(sf::Color::Cyan);
-    float deltaTime {0.0f};
+    float deltaTime { 0.0f };
 
     StateManager stateManager(&window);
     stateManager.addState(new MainGame(&window));
